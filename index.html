@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Enrollment Form</title>
+  <script src="script.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: rgb(200, 222, 159);
+    }
+    
+    h2 {
+      text-align: center;
+    }
+    
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    
+    button {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: rgb(70, 11, 173);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    
+    .disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body onload="initializeForm()">
+  <h2>Student Enrollment Form</h2>
+  <form id="enrollmentForm" onsubmit="return false;">
+    <label for="roll_no">Roll No:</label>
+    <input type="text" name="roll_no" id="roll_no" required oninput="checkPrimaryKey()">
+
+    <label for="full_name">Full Name:</label>
+    <input type="text" name="full_name" id="full_name" required>
+
+    <label for="class">Class:</label>
+    <input type="text" name="class" id="class" required>
+
+    <label for="birth_date">Birth Date:</label>
+    <input type="date" name="birth_date" id="birth_date" required>
+
+    <label for="address">Address:</label>
+    <input type="text" name="address" id="address" required>
+
+    <label for="enrollment_date">Enrollment Date:</label>
+    <input type="date" name="enrollment_date" id="enrollment_date" required>
+
+    <button type="submit" id="saveButton" onclick="saveData()" disabled>Save</button>
+    <button type="button" id="updateButton" onclick="updateData()" disabled>Update</button>
+    <button type="button" id="resetButton" onclick="resetForm()" disabled>Reset</button>
+  </form>
+  <footer>Made with 🧡 by Saurav</footer>
+</body>
+</html>
