@@ -3,21 +3,7 @@
 <html>
 <head>
   <title>Project: Student Enrollment System with JsonPowerDB</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-    
-    h2 {
-      text-align: center;
-    }
-    
-    p {
-      margin-bottom: 10px;
-    }
-  </style>
+  
 </head>
 <body>
   <h2>Project: Student Enrollment System with JsonPowerDB</h2>
